@@ -15,12 +15,12 @@
 
 <script setup>
 import Toolbar from 'primevue/toolbar'
-import Button from 'primevue/button'
+import ConfirmDialog from 'primevue/confirmdialog'
+import { useConfirm } from 'primevue/useconfirm'
+
 import { Inertia } from '@inertiajs/inertia'
 import { computed } from '@vue/reactivity'
 import { usePage, Link } from '@inertiajs/inertia-vue3'
-import ConfirmDialog from 'primevue/confirmdialog'
-import { useConfirm } from 'primevue/useconfirm'
 
 const confirm = useConfirm()
 

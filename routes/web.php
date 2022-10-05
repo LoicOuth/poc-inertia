@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/order', [OrderController::class, 'store'])->name('order.store');
 
     Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/admin/products', [ProductController::class, 'index'])->name('products.index');
+    Route::get('/admin/products/create', [ProductController::class, 'create'])->name('products.create');
+
 
     Route::post('/logout', [AuthenticationController::class, 'logout'])->name('logout');
 });

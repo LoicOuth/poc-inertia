@@ -12,14 +12,14 @@ class OrderController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Orders', [
+        return Inertia::render('Orders/Index', [
             'ordersPaginate' => Order::where('user_id', Auth::id())->withCount('products')->withSum('products', 'price')->with('user')->paginate(5)
         ]);
     }
 
     public function create()
     {
-        return Inertia::render('OrderCreate', [
+        return Inertia::render('Orders/Create', [
             'productsPaginate' => Product::paginate(10)
         ]);
     }

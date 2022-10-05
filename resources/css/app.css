@@ -1,0 +1,17 @@
+.line {
+   width: 90%;
+   height: 2px;
+   position: absolute;
+   top: 25%;
+   left: 50px;
+   z-index: -1;
+   
+}
+
+.bg-disabled {
+   background-color: var(--primary-200);
+}
+
+.fill-white {
+   fill: white;
+}

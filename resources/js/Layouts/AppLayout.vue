@@ -1,6 +1,6 @@
 <template>
    <NavBar :links="links" />
-   <div>
+   <div class="mt-5">
       <slot />
    </div>
 </template>
