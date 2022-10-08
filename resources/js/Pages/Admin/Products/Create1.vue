@@ -2,7 +2,7 @@
    <Button label="Create 1" @click="visible = true" />
 
    <Dialog header="Create product" :modal="true" v-model:visible="visible" :style="{width: '50vw'}">
-      <div class="flex flex-column align-items-center">
+      <form class="flex flex-column align-items-center" @submit.prevent="handleCreate">
          <div class="p-float-label w-8 mt-5">
             <InputText v-model="formData.name" class="w-full" />
             <label>Name</label>
@@ -23,8 +23,8 @@
          </div>
          <small v-if="formData.errors.price" class="p-error ml-5 mt-2">{{ formData.errors.price }}</small>
 
-         <Button class="w-full mt-5" label="Create" @click="handleCreate" :loading="formData.processing" />
-      </div>
+         <Button type="submit" class="w-full mt-5" label="Create" :loading="formData.processing" />
+      </form>
    </Dialog>
 </template>
 
