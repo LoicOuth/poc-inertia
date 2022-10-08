@@ -6,6 +6,8 @@ import InputText from 'primevue/inputtext'
 import DataTable from 'primevue/datatable'
 import Column from 'primevue/column'
 import Chip from 'primevue/chip'
+import Dialog from 'primevue/dialog'
+import InputNumber from 'primevue/inputnumber';
 
 export default {
    install: (app) => {
@@ -16,6 +18,8 @@ export default {
       app.component('DataTable', DataTable)
       app.component('Column', Column)
       app.component('Chip', Chip)
+      app.component('Dialog', Dialog)
+      app.component('InputNumber', InputNumber)
       app.use(ConfirmationService)
    }
 }

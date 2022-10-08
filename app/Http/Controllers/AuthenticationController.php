@@ -15,9 +15,7 @@ class AuthenticationController extends Controller
 
     public function login(LoginRequest $request)
     {
-        $credential = $request->validated();
-
-        if (Auth::attempt($credential)) {
+        if (Auth::attempt($request->validated())) {
             if (Auth::user()->is_admin) {
                 return redirect()->route('admin.dashboard');
             } else {
